@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 
 const images = [
+  'https://cdn.poehali.dev/projects/1f8b8785-a453-4f59-a7ce-cf84b844de23/files/3344382e-23ed-4048-adf6-f32e0ed9d907.jpg',
   'https://cdn.poehali.dev/templates/creative-portfolio-ru/gallery-2.jpg',
   'https://cdn.poehali.dev/templates/creative-portfolio-ru/gallery-1.jpg',
   'https://cdn.poehali.dev/templates/creative-portfolio-ru/gallery-4.jpg',
-  'https://cdn.poehali.dev/templates/creative-portfolio-ru/gallery-5.jpg',
 ];
 
 export default function HeroSection() {
@@ -53,10 +53,10 @@ export default function HeroSection() {
                 isLoaded ? 'translate-x-0 opacity-100' : '-translate-x-8 opacity-0'
               )}
             >
-              <div className="relative h-48 w-48 overflow-hidden rounded-full border-4 border-white shadow-2xl md:h-64 md:w-64">
+              <div className="relative h-48 w-48 overflow-hidden rounded-full border-4 border-white/80 shadow-2xl md:h-64 md:w-64">
                 <img
                   src="https://cdn.poehali.dev/templates/creative-portfolio-ru/portrait.jpg"
-                  alt="Креативный специалист"
+                  alt="Анна Ясникова"
                   className="h-full w-full object-cover"
                 />
               </div>
@@ -70,10 +70,15 @@ export default function HeroSection() {
             >
               <div className="space-y-4">
                 <p className="text-3xl font-light text-white md:text-4xl lg:text-5xl">
-                  Алексей Иванов
+                  Анна Ясникова
                 </p>
-                <p className="text-xl font-light text-white/80 md:text-2xl">
-                  Креативный директор | Дизайнер
+                <p className="text-base font-light text-white/80 md:text-lg lg:text-xl leading-relaxed">
+                  Биотехнолог · Нутрициолог · Косметолог · Преподаватель
+                </p>
+                <p className="text-sm text-white/60 md:text-base">
+                  Более 20 лет в науке о здоровье и красоте.
+                  <br />
+                  Авторский чай на основе фейхоа — забота о вас изнутри.
                 </p>
                 <div className="flex gap-6 pt-4">
                   <a
