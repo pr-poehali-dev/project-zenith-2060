@@ -69,13 +69,35 @@ export default function HeroSection() {
                 isLoaded ? 'translate-x-0 opacity-100' : '-translate-x-8 opacity-0'
               )}
             >
-              <div className="relative h-48 w-48 overflow-hidden rounded-full shadow-2xl md:h-64 md:w-64"
-                style={{ border: '3px solid #517326' }}>
-                <img
-                  src="https://cdn.poehali.dev/projects/1f8b8785-a453-4f59-a7ce-cf84b844de23/bucket/81ed30f0-af74-4863-8013-b2dbd567999e.jpg"
-                  alt="Анна Ясникова"
-                  className="h-full w-full object-cover object-top"
+              {/* Внешнее свечение */}
+              <div className="relative inline-flex items-center justify-center">
+                <div
+                  className="absolute rounded-full"
+                  style={{
+                    width: 'calc(100% + 16px)',
+                    height: 'calc(100% + 16px)',
+                    background: 'radial-gradient(circle, rgba(81,115,38,0.6) 0%, rgba(81,115,38,0.2) 50%, transparent 70%)',
+                    filter: 'blur(12px)',
+                  }}
                 />
+                {/* Кольцо с градиентом */}
+                <div
+                  className="relative rounded-full p-[3px]"
+                  style={{
+                    background: 'linear-gradient(135deg, #DADFB4, #517326, #2D4A1E, #DADFB4)',
+                    boxShadow: '0 0 30px rgba(81,115,38,0.5), 0 0 60px rgba(81,115,38,0.2)',
+                  }}
+                >
+                  <div className="relative h-48 w-48 overflow-hidden rounded-full md:h-64 md:w-64"
+                    style={{ background: '#0e1a0a' }}>
+                    <img
+                      src="https://cdn.poehali.dev/projects/1f8b8785-a453-4f59-a7ce-cf84b844de23/bucket/81ed30f0-af74-4863-8013-b2dbd567999e.jpg"
+                      alt="Анна Ясникова"
+                      className="h-full w-full object-cover"
+                      style={{ objectPosition: '50% 15%' }}
+                    />
+                  </div>
+                </div>
               </div>
             </div>
 
